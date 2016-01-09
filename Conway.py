@@ -64,5 +64,8 @@ def TestGrid():
         grid = GetNextState(grid)
 
 if __name__ == '__main__':
+    if len(sys.argv) < 4:
+        print 'Not the correct number of arguments. Please input in the format \'python Conway.py <rows> <cols> <iterations>\''
+        exit()
     Conway(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]))
 #    TestGrid()
